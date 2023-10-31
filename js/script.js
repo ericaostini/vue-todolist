@@ -43,6 +43,9 @@ createApp({
             };
             this.tasks.unshift(newTask);
             this.newTask = ""
+        },
+        addDone(i){
+            this.tasks[i].done = !this.tasks[i].done
         }
         
     },
