@@ -25,13 +25,24 @@ createApp({
                     done: true
                 }
             ],
-            lastIndex: 4
+            lastIndex: 4,
+            newTodo: ""
             
         }
     },
     methods: {
         removeTask(index){
             this.tasks.splice(index, 1)
+        },
+        addTasks(){
+            this.lastIndex++
+            const newTask = {
+                id: this.lastIndex,
+                text: this.newTask,
+                done: false
+            };
+            this.tasks.unshift(newTask);
+            this.newTask = ""
         }
         
     },

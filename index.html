@@ -13,14 +13,10 @@
         <div class="container">
             <header class="text-center my-3">
                 <img src="img/logo.svg" alt="logo">
-                <form class="row justify-content-end m-3">
-                    <div class="col-auto">
-                      <input type="text" class="form-control" placeholder="Nuovo compito">
-                    </div>
-                    <div class="col-auto">
-                      <button class="btn btn-primary mb-3">Aggiungi</button>
-                    </div>
-                  </form>
+                <div class="m-3 text-start">
+                    <input type="text" class="form-control w-25 d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask">
+                    <button class="btn btn-primary mt-2" @click = "addTasks">Aggiungi</button>
+                </div>
             </header>
             <main>
                 <ul class="list-group" v-if = "tasks.length > 0">
