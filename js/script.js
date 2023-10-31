@@ -24,7 +24,8 @@ createApp({
                     text: "Svuotare la lavatrice",
                     done: true
                 }
-            ]
+            ],
+            lastIndex: 4
             
         }
     },

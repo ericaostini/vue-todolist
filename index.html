@@ -15,7 +15,12 @@
                 <img src="img/logo.svg" alt="logo">
             </header>
             <main>
-        
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action border-item d-flex justify-content-between" v-for = "(task, index) in tasks" :key = "task.id">
+                        <span>{{task.text}}</span>
+                        <i class="fa-regular fa-trash-can text-danger" style="cursor : pointer;"></i>
+                    </li>
+                </ul>
             </main>
         </div>
     </div>
