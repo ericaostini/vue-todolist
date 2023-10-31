@@ -20,9 +20,11 @@
             </header>
             <main>
                 <ul class="list-group" v-if = "tasks.length > 0">
-                    <li class="list-group-item list-group-item-action border-item d-flex justify-content-between" v-for = "(task, index) in tasks" :key = "task.id">
+                    <li class="list-group-item list-group-item-action border-item d-flex justify-content-between" :class = "task.done ? 'green' : 'white'" v-for = "(task, index) in tasks" :key = "task.id">
                         <span :class = "(task.done ? 'done' : task.done)" @click = "addDone(index)">{{task.text}}</span>
-                        <i class="fa-regular fa-trash-can text-danger" style="cursor : pointer;" @click = "removeTask(index)"></i>
+                        <div :class = "task.done ? 'd-block' : 'd-none'">
+                            <i class="fa-regular fa-trash-can text-light" style="cursor : pointer;" @click = "removeTask(index)"></i>
+                        </div>
                     </li>
                 </ul>
                 <div class="text-bg-success text-center p-3" v-else>

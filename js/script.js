@@ -26,8 +26,8 @@ createApp({
                 }
             ],
             lastIndex: 4,
-            newTodo: ""
-            
+            newTask: "",
+            bgTask: "white"
         }
     },
     methods: {

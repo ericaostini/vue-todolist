@@ -15,3 +15,10 @@ header img{
 .done{
     text-decoration: line-through;
 }
+.white{
+    background-color: white;
+}
+.green{
+    background-color: green;
+    color: white;
+}
