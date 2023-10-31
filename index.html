@@ -13,6 +13,14 @@
         <div class="container">
             <header class="text-center my-3">
                 <img src="img/logo.svg" alt="logo">
+                <form class="row justify-content-end m-3">
+                    <div class="col-auto">
+                      <input type="text" class="form-control" placeholder="Nuovo compito">
+                    </div>
+                    <div class="col-auto">
+                      <button class="btn btn-primary mb-3">Aggiungi</button>
+                    </div>
+                  </form>
             </header>
             <main>
                 <ul class="list-group" v-if = "tasks.length > 0">
