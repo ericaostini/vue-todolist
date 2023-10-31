@@ -18,7 +18,7 @@
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-action border-item d-flex justify-content-between" v-for = "(task, index) in tasks" :key = "task.id">
                         <span :class = "(task.done ? 'done' : task.done)">{{task.text}}</span>
-                        <i class="fa-regular fa-trash-can text-danger" style="cursor : pointer;"></i>
+                        <i class="fa-regular fa-trash-can text-danger" style="cursor : pointer;" @click = "removeTask(index)"></i>
                     </li>
                 </ul>
             </main>
