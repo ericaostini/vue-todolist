@@ -9,4 +9,4 @@ createApp({
     methods: {
         
     },
-});
+}).mount("#app");
