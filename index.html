@@ -13,21 +13,23 @@
         <div class="container">
             <header class="text-center my-3">
                 <img src="img/logo.svg" alt="logo">
-                <div class="m-3 text-start">
-                    <input type="text" class="form-control w-25 d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask" @keyup.enter = "addTasks">
-                    <button class="btn btn-primary mt-2" @click = "addTasks">Aggiungi</button>
+                <div class="align-items-center justify-content-between">
+                    <div class="m-3 text-start">
+                        <input type="text" class="form-control w-25 d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask" @keyup.enter = "addTasks">
+                        <button class="btn btn-primary mt-2" @click = "addTasks">Aggiungi</button>
+                    </div>
                 </div>
             </header>
             <main>
                 <ul class="list-group" v-if = "tasks.length > 0">
-                    <li class="list-group-item list-group-item-action border-item d-flex justify-content-between" :class = "task.done ? 'green' : 'white'" v-for = "(task, index) in tasks" :key = "task.id">
+                    <li class="border-item d-flex justify-content-between" :class = "task.done ? 'green list-group-item' : 'white list-group-item list-group-item-action '" v-for = "(task, index) in tasks" :key = "task.id">
                         <span :class = "(task.done ? 'done' : task.done)" @click = "addDone(index)">{{task.text}}</span>
-                        <div :class = "task.done ? 'd-block' : 'd-none'">
-                            <i class="fa-regular fa-trash-can text-light" style="cursor : pointer;" @click = "removeTask(index)"></i>
+                        <div :class = "task.done ? 'd-block text-light' : 'd-block text-success'">
+                            <i :class="task.done ? 'fa-regular fa-trash-can' : 'fa-regular fa-circle-xmark' " style="cursor : pointer;" @click = "removeTask(index)"></i>
                         </div>
                     </li>
                 </ul>
-                <div class="text-bg-success text-center p-3" v-else>
+                <div class="text-bg-info text-center p-3" v-else>
                     <span>Per oggi hai fatto tutto </span>
                     <i class="fa-regular fa-thumbs-up fa-bounce"></i>
                 </div>

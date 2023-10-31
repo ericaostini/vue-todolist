@@ -27,7 +27,7 @@ createApp({
             ],
             lastIndex: 4,
             newTask: "",
-            bgTask: "white"
+            countTask: 0
         }
     },
     methods: {
@@ -46,7 +46,7 @@ createApp({
         },
         addDone(i){
             this.tasks[i].done = !this.tasks[i].done
-        }
+        },
         
     },
 }).mount("#app");
