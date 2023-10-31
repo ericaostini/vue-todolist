@@ -11,3 +11,7 @@ header img{
 .border-item{
     border-left: 2px solid green;
 }
+
+.done{
+    text-decoration: line-through;
+}
