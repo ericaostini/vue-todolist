@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Vue ToDoList</title>
 </head>
@@ -13,6 +14,10 @@
         <div class="container">
             <header class="text-center my-3">
                 <img src="img/logo.svg" alt="logo">
+                <div class="d-flex myImg align-items-end">
+                    <h1>To-do List</h1>
+                    <img src="img/penImg.png" alt="pen">
+                </div>
                 <div class="align-items-center justify-content-between">
                     <div class="m-3 text-start">
                         <input type="text" class="form-control w-25 d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask" @keyup.enter = "addTasks">
