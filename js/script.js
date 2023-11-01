@@ -41,7 +41,6 @@ createApp({
                 text: this.newTask,
                 done: false
             };
-            this.tasks.unshift(newTask);
             this.newTask = ""
         },
         addDone(i){

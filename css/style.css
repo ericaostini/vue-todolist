@@ -29,3 +29,17 @@ header img{
     width: 100px;
     padding-left: 10px;
 }
+.mybtn {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid grey;
+    outline: none;
+  }
+  .mybtn:hover {
+    transition: 1s ease-in-out;
+    background: green;
+    border: 2px solid black;
+    color: white;
+  }

@@ -19,9 +19,9 @@
                     <img src="img/penImg.png" alt="pen">
                 </div>
                 <div class="align-items-center justify-content-between">
-                    <div class="m-3 text-start">
-                        <input type="text" class="form-control w-25 d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask" @keyup.enter = "addTasks">
-                        <button class="btn btn-primary mt-2" @click = "addTasks">Aggiungi</button>
+                    <div class="m-3 d-flex align-items-center">
+                        <input type="text" class="w-25 form-control bg-body-secondary d-block justify-content-end" placeholder="Nuovo compito" v-model = "newTask" @keyup.enter = "addTasks">
+                        <button class="mybtn mx-3" @click = "addTasks">Aggiungi</button>
                     </div>
                 </div>
             </header>
